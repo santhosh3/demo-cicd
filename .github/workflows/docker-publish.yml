@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-push:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest  # <-- Fixed typo here
 
     steps:
     - name: Checkout code
@@ -36,4 +36,3 @@ jobs:
         context: ./frontend
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/test-frontend:latest
-    
